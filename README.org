@@ -6,5 +6,5 @@ Medal Winner is a Python-based data analysis tool designed to explore the win/lo
 
 ** Key Features
 
-- **Data Collection:** Gather data on athletes' performances in medal rounds from [[https://www.wkf.net/][WKF]]'s public website.
-- **Binomial Distribution Analysis:** Utilize the binomial distribution to model and analyze the probability of success in medal matches.
+- *Data Collection:* Gather data on athletes' performances in medal rounds from [[https://www.wkf.net/][WKF]]'s public website.
+- *Binomial Distribution Analysis:* Utilize the binomial distribution to model and analyze the probability of success in medal matches.
