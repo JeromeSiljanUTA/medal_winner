@@ -22,8 +22,8 @@ def clean_csv() -> pd.DataFrame:
 
 
 def get_total_wins(df: pd.DataFrame) -> pd.Series:
-    return df.groupby("Competitor")["Success"].sum()
+    return df.groupby("Competitor")["Success"].sum().rename("Wins")
 
 
 def get_total_rounds(df: pd.DataFrame) -> pd.Series:
-    return df.groupby("Competitor")["Competitor"].count()
+    return df.groupby("Competitor")["Competitor"].count().rename("Rounds")
