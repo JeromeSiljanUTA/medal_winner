@@ -1,0 +1,26 @@
+* Data Exploration
+** Fix path stuff
+#+BEGIN_SRC python :session
+import sys
+import os
+src_dir = os.path.join(os.getcwd(), '..', 'src')
+sys.path.append(src_dir)
+#+END_SRC
+
+#+RESULTS:
+: None
+
+** Imports
+#+BEGIN_SRC python :session
+import pandas as pd
+from d02_intermediate.transform_int_data import clean_csv
+#+END_SRC
+
+#+RESULTS:
+
+** Read csv
+#+BEGIN_SRC python :session
+df = clean_csv()
+#+END_SRC
+
+#+RESULTS:
