@@ -17,6 +17,8 @@ sys.path.append(src_dir)
 ** Imports
 #+BEGIN_SRC python
 import pandas as pd
+import numpy as np
+
 from matplotlib import use
 import matplotlib.pyplot as plt
 from d02_intermediate.transform_int_data import (
@@ -57,5 +59,51 @@ df
 
 ** Make new df with total wins, rounds
 #+BEGIN_SRC python
-
+wins = get_total_wins(df)
+rounds = get_total_rounds(df)
+binomial_df = pd.DataFrame([wins, rounds]).T
+binomial_df
 #+END_SRC
+
+#+RESULTS:
+#+begin_example
+                        Wins  Rounds
+Competitor                          
+Aghalarzade Tural          1       5
+Almasatfa Abdel Rahman     7      10
+Amirali Didar              5       8
+Da Costa Steven            6       6
+De Vivo Gianluca           4       5
+Elsawy Ali                 6       8
+Kozaki Yugo                2       5
+Lotfy Ahmed                1       5
+Tadissi Yves Martial       4       8
+Xenos Dionysios            5       8
+#+end_example
+
+** Toy example Almasatfa Abdel Rahman
+
+#+BEGIN_SRC python
+probability_grid = np.linspace(0, 1, 21)
+dist = binom.pmf(7, 10, probability_grid)
+plt.plot(dist)
+plt.show()
+#+END_SRC
+
+#+RESULTS:
+: None
+
+
+** DataFrame apply function to calculate distribution
+#+BEGIN_SRC python
+def generate_binomial_dist(win_stats: pd.Series) -> int:
+    wins, rounds, = win_stats["Wins"], win_stats["Rounds"]
+
+    # Try 21 probabilities
+    probability_grid = np.linspace(0, 1, 21)
+    dist = binom.pmf(wins, rounds, probability_grid)
+    return dist
+#+END_SRC
+
+#+RESULTS:
+
