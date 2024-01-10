@@ -21,10 +21,11 @@ from matplotlib import use
 import matplotlib.pyplot as plt
 from d02_intermediate.transform_int_data import clean_csv
 
-matplotlib.use('GTK3Agg')
+use('GTK3Agg')
 #+END_SRC
 
 #+RESULTS:
+: None
 
 ** Read csv
 #+BEGIN_SRC python
@@ -52,8 +53,8 @@ df
 
 ** Look at data
 #+BEGIN_SRC python
-comp_counts = df.groupby("Competitor")["Competitor"].count()
-comp_counts
+round_counts = df.groupby("Competitor")["Competitor"].count()
+round_counts
 #+END_SRC
 
 #+RESULTS:
@@ -94,7 +95,7 @@ Name: Competitor, dtype: int64
 
 ** Competitor information
 #+BEGIN_SRC python
-comp_counts.describe()
+round_counts.describe()
 #+END_SRC
 
 #+RESULTS:
@@ -110,25 +111,60 @@ comp_counts.describe()
 
 ** Picking top 75%
 #+BEGIN_SRC python
-names = comp_counts[comp_counts >= 5].index
+names = round_counts[round_counts >= 5].index
 
-df[df["Competitor"].isin(names)].reset_index(drop=True)
+df = df[df["Competitor"].isin(names)].reset_index(drop=True)
+#+END_SRC
+
+#+RESULTS:
+
+** Change success to True/False
+#+BEGIN_SRC python
+df["Success"] = (df["Success"] == "Win")
+#+END_SRC
+
+#+RESULTS:
+
+** Record total rounds
+#+BEGIN_SRC python
+total_rounds = df.groupby("Competitor")["Competitor"].count()
+total_rounds
 #+END_SRC
 
 #+RESULTS:
 #+begin_example
-      Location  Year              Competitor   Round Success
-0        Cairo  2023         Xenos Dionysios    Semi     Win
-1        Cairo  2023           Amirali Didar    Semi    Loss
-2        Cairo  2023         Da Costa Steven    Semi     Win
-3        Cairo  2023         Xenos Dionysios   Final    Loss
-4        Cairo  2023         Da Costa Steven   Final     Win
-..         ...   ...                     ...     ...     ...
-63  Matosinhos  2022  Almasatfa Abdel Rahman    Semi     Win
-64  Matosinhos  2022         Da Costa Steven    Semi     Win
-65  Matosinhos  2022  Almasatfa Abdel Rahman   Final    Loss
-66  Matosinhos  2022         Da Costa Steven   Final     Win
-67  Matosinhos  2022       Aghalarzade Tural  Bronze    Loss
+Competitor
+Aghalarzade Tural          5
+Almasatfa Abdel Rahman    10
+Amirali Didar              8
+Da Costa Steven            6
+De Vivo Gianluca           5
+Elsawy Ali                 8
+Kozaki Yugo                5
+Lotfy Ahmed                5
+Tadissi Yves Martial       8
+Xenos Dionysios            8
+Name: Competitor, dtype: int64
+#+end_example
 
-[68 rows x 5 columns]
+** Record total wins
+#+BEGIN_SRC python
+total_wins = df.groupby("Competitor")["Success"].sum()
+total_wins
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+Competitor
+Aghalarzade Tural         1
+Almasatfa Abdel Rahman    7
+Amirali Didar             5
+Da Costa Steven           6
+De Vivo Gianluca          4
+Elsawy Ali                6
+Kozaki Yugo               2
+Lotfy Ahmed               1
+Tadissi Yves Martial      4
+Xenos Dionysios           5
+Name: Success, dtype: int64
 #+end_example
