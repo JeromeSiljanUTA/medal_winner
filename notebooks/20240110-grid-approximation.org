@@ -1,0 +1,61 @@
+* Grid Approximation of the Binomial Distribution
+:PROPERTIES:
+:header-args: :exports both :session
+:END:
+
+** Fix path stuff
+#+BEGIN_SRC python
+import sys
+import os
+src_dir = os.path.join(os.getcwd(), '..', 'src')
+sys.path.append(src_dir)
+#+END_SRC
+
+#+RESULTS:
+: None
+
+** Imports
+#+BEGIN_SRC python
+import pandas as pd
+from matplotlib import use
+import matplotlib.pyplot as plt
+from d02_intermediate.transform_int_data import (
+    clean_csv,
+    get_total_rounds,
+    get_total_wins,
+)
+
+use('GTK3Agg')
+#+END_SRC
+
+#+RESULTS:
+: None
+
+** Read csv
+#+BEGIN_SRC python
+df = clean_csv()
+df
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+      Location  Year              Competitor   Round  Success
+0        Cairo  2023         Xenos Dionysios    Semi     True
+1        Cairo  2023           Amirali Didar    Semi    False
+2        Cairo  2023         Da Costa Steven    Semi     True
+3        Cairo  2023         Xenos Dionysios   Final    False
+4        Cairo  2023         Da Costa Steven   Final     True
+..         ...   ...                     ...     ...      ...
+63  Matosinhos  2022  Almasatfa Abdel Rahman    Semi     True
+64  Matosinhos  2022         Da Costa Steven    Semi     True
+65  Matosinhos  2022  Almasatfa Abdel Rahman   Final    False
+66  Matosinhos  2022         Da Costa Steven   Final     True
+67  Matosinhos  2022       Aghalarzade Tural  Bronze    False
+
+[68 rows x 5 columns]
+#+end_example
+
+** Make new df with total wins, rounds
+#+BEGIN_SRC python
+
+#+END_SRC
