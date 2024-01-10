@@ -2,9 +2,12 @@
 
 ** Overview
 
-Medal Winner is a Python-based data analysis tool designed to explore the win/loss patterns of athletes in high-pressure medal rounds in Karate1 Premier League competitions. The project employs statistical techniques, particularly the binomial distribution, to gain insights into athletes' success rates in these matches. By examining the outcomes of medal matches, the project aims to uncover patterns, trends, and factors that explain specific athletes' performance under intense pressure.
+Medal Winner is a Python-based data analysis project designed to explore the win/loss patterns of athletes in high-pressure medal rounds in Karate1 Premier League competitions. The project employs statistical techniques, particularly the binomial distribution, to gain insights into athletes' success rates in these matches. By examining the outcomes of medal matches, the project aims to uncover patterns, trends, and factors that explain specific athletes' performance under intense pressure.
 
 ** Key Features
 
 - *Data Collection:* Gather data on athletes' performances in medal rounds from [[https://www.wkf.net/][WKF]]'s public website.
 - *Binomial Distribution Analysis:* Utilize the binomial distribution to model and analyze the probability of success in medal matches.
+
+** Sources
+ - [[https://github.com/dssg/hitchhikers-guide/blob/master/sources/curriculum/0_before_you_start/pipelines-and-project-workflow/README.md][DSSG's Pipelines and Project Workflow]] helped inform the structure of the project.
