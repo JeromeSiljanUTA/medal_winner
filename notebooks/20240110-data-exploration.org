@@ -29,7 +29,14 @@ use('GTK3Agg')
 
 ** Read csv
 #+BEGIN_SRC python
-df = clean_csv()
+#df = clean_csv()    # No longer in use
+
+medal_data_path = os.path.join("data", "01_raw", "medal_data.csv")
+# Fix path if called from ntoebook
+if not os.path.exists(medal_data_path):
+medal_data_path = os.path.join("../", "data", "01_raw", "medal_data.csv")
+
+df = pd.read_csv(medal_data_path)
 df
 #+END_SRC
 
