@@ -46,6 +46,8 @@ def generate_binomial_dist(win_stats: pd.Series) -> int:
     # Try 21 probabilities
     probability_grid = np.linspace(0, 1, 21)
     dist = binom.pmf(wins, rounds, probability_grid)
+    # Normalize
+    dist = dist / sum(dist)
     return dist
 
 
