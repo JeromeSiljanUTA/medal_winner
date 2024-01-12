@@ -1,0 +1,58 @@
+* Data Exploration
+:PROPERTIES:
+:header-args: :exports both :session
+:END:
+
+** Fix path stuff
+#+BEGIN_SRC python
+import sys
+import os
+src_dir = os.path.join(os.getcwd(), '..', 'src')
+sys.path.append(src_dir)
+#+END_SRC
+
+#+RESULTS:
+: None
+
+** Imports
+#+BEGIN_SRC python
+import pandas as pd
+import numpy as np
+from matplotlib import use
+import matplotlib.pyplot as plt
+from d02_intermediate.transform_int_data import (
+    clean_csv,
+    attach_binomial_dists,
+)
+
+use('GTK3Agg')
+plt.style.use('dark_background')
+#+END_SRC
+
+#+RESULTS:
+: None
+
+** Gather data, calculate binomial distributions
+#+BEGIN_SRC python
+df = clean_csv()
+df = attach_binomial_dists(df)
+#+END_SRC
+
+#+RESULTS:
+
+** Toy example: MLE with Amirali Didar
+#+BEGIN_SRC python
+dist = df.iloc[4]["Distribution"]
+x = probability_grid = np.linspace(0, 1, 101)
+
+MLE = df.iloc[4]["Wins"]/df.iloc[4]["Rounds"]
+
+plt.axvline(average, color="g")
+
+plt.plot(x, dist, marker=".")
+plt.legend(["MLE", "Distribution"])
+plt.show()
+#+END_SRC
+
+#+RESULTS:
+: None
