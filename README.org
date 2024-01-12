@@ -4,8 +4,20 @@
 
 Medal Winner is a Python-based data analysis project designed to explore the win/loss patterns of athletes in high-pressure medal rounds in Karate1 Premier League competitions. The project employs statistical techniques, particularly the binomial distribution, to gain insights into athletes' success rates in these matches. By examining the outcomes of medal matches, the project aims to uncover patterns, trends, and factors that explain specific athletes' performance under intense pressure.
 
-** Maximum Likelihood Estimation (MLE) for medal round wins per competitor
+** Maximum Likelihood Estimation (MLE) for Medal Round Wins per Competitor
 [[file:data/06_reporting/MLE.png]]
+
+** Binomial Distribution per Competitor
+[[file:data/06_reporting/binom_01_Aghalarzade Tural.png]]
+[[file:data/06_reporting/binom_02_Lotfy Ahmed.png]]
+[[file:data/06_reporting/binom_03_Kozaki Yugo.png]]
+[[file:data/06_reporting/binom_04_Tadissi Yves Martial.png]]
+[[file:data/06_reporting/binom_05_Amirali Didar.png]]
+[[file:data/06_reporting/binom_06_Xenos Dionysios.png]]
+[[file:data/06_reporting/binom_07_Almasatfa Abdel Rahman.png]]
+[[file:data/06_reporting/binom_08_Elsawy Ali.png]]
+[[file:data/06_reporting/binom_09_De Vivo Gianluca.png]]
+[[file:data/06_reporting/binom_10_Da Costa Steven.png]]
 
 ** Key Features
 
