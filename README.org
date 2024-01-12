@@ -4,6 +4,9 @@
 
 Medal Winner is a Python-based data analysis project designed to explore the win/loss patterns of athletes in high-pressure medal rounds in Karate1 Premier League competitions. The project employs statistical techniques, particularly the binomial distribution, to gain insights into athletes' success rates in these matches. By examining the outcomes of medal matches, the project aims to uncover patterns, trends, and factors that explain specific athletes' performance under intense pressure.
 
+** Maximum Likelihood Estimation (MLE) for medal round wins per competitor
+[[file:data/06_reporting/MLE.png]]
+
 ** Key Features
 
 - *Data Collection:* Gather data on athletes' performances in medal rounds from [[https://www.wkf.net/][WKF]]'s public website.
