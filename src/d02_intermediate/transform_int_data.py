@@ -2,11 +2,12 @@
 Load data to DataFrame.
 """
 
-import pandas as pd
-import numpy as np
-from scipy.stats import binom
-import sys
 import os
+import sys
+
+import numpy as np
+import pandas as pd
+from scipy.stats import binom
 
 
 def clean_csv() -> pd.DataFrame:
@@ -44,7 +45,7 @@ def generate_binomial_dist(win_stats: pd.Series) -> int:
     )
 
     # Try 21 probabilities
-    probability_grid = np.linspace(0, 1, 21)
+    probability_grid = np.linspace(0, 1, 101)
     dist = binom.pmf(wins, rounds, probability_grid)
     # Normalize
     dist = dist / sum(dist)
