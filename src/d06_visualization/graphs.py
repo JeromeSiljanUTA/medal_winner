@@ -12,9 +12,11 @@ def draw_MLE(df: pd.DataFrame):
 
     x = np.linspace(0, 1, 101)
     df = df.sort_values(by=["MLE"])
-    for mle in df["MLE"]:
-        plt.axvline(mle, color=next(color_gen)["color"], linewidth=4.0)
 
-    plt.legend(df.index)
+    plt.bar(df.index, df["MLE"])
+    plt.title("MLE of medal round win")
+    plt.xticks(rotation=45, ha="right")
+    plt.ylabel("Percentage")
+    plt.subplots_adjust(bottom=0.2)
     plt.savefig("new.png")
     plt.show()
