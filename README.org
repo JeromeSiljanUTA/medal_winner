@@ -9,25 +9,25 @@ Medal Winner is a Python-based data analysis project designed to explore the win
 
 ** Binomial Distribution per Competitor
 *** Aghalarzade Tural
-[[file:data/06_reporting/binom_01_Aghalarzade Tural.png]]
+[[file:data/06_reporting/binom_01_Aghalarzade_Tural.png]]
 *** Lotfy Ahmed
-[[file:data/06_reporting/binom_02_Lotfy Ahmed.png]]
+[[file:data/06_reporting/binom_02_Lotfy_Ahmed.png]]
 *** Kozaki Yugo
-[[file:data/06_reporting/binom_03_Kozaki Yugo.png]]
+[[file:data/06_reporting/binom_03_Kozaki_Yugo.png]]
 *** Tadissi Yves Martial
-[[file:data/06_reporting/binom_04_Tadissi Yves Martial.png]]
+[[file:data/06_reporting/binom_04_Tadissi_Yves_Martial.png]]
 *** Amirali Didar
-[[file:data/06_reporting/binom_05_Amirali Didar.png]]
+[[file:data/06_reporting/binom_05_Amirali_Didar.png]]
 *** Xenos Dionysios
-[[file:data/06_reporting/binom_06_Xenos Dionysios.png]]
+[[file:data/06_reporting/binom_06_Xenos_Dionysios.png]]
 *** Almasatfa Abdel Rahman
-[[file:data/06_reporting/binom_07_Almasatfa Abdel Rahman.png]]
+[[file:data/06_reporting/binom_07_Almasatfa_Abdel_Rahman.png]]
 *** Elsawy Ali
-[[file:data/06_reporting/binom_08_Elsawy Ali.png]]
+[[file:data/06_reporting/binom_08_Elsawy_Ali.png]]
 *** De Vivo Gianluca
-[[file:data/06_reporting/binom_09_De Vivo Gianluca.png]]
+[[file:data/06_reporting/binom_09_De_Vivo_Gianluca.png]]
 *** Da Costa Steven
-[[file:data/06_reporting/binom_10_Da Costa Steven.png]]
+[[file:data/06_reporting/binom_10_Da_Costa_Steven.png]]
 
 ** Key Features
 
